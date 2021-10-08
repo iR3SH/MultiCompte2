@@ -43,12 +43,6 @@
       "frameworks": {
         "net5.0-windows7.0": {
           "targetAlias": "net5.0-windows",
-          "dependencies": {
-            "Google.Protobuf": {
-              "target": "Package",
-              "version": "[3.18.1, )"
-            }
-          },
           "imports": [
             "net461",
             "net462",

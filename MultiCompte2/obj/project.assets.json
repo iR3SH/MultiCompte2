@@ -1,47 +1,11 @@
 {
   "version": 3,
   "targets": {
-    "net5.0-windows7.0": {
-      "Google.Protobuf/3.18.1": {
-        "type": "package",
-        "compile": {
-          "lib/net5.0/Google.Protobuf.dll": {}
-        },
-        "runtime": {
-          "lib/net5.0/Google.Protobuf.dll": {}
-        }
-      }
-    }
+    "net5.0-windows7.0": {}
   },
-  "libraries": {
-    "Google.Protobuf/3.18.1": {
-      "sha512": "7lP9/TAFa27uJC5Udbybnb8twoXDIjA5gGjmsrwJqyNIRoJ3VKKrJhQwrsQAIzwT54l7DwlpWm5vGDH5hW/Dig==",
-      "type": "package",
-      "path": "google.protobuf/3.18.1",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "google.protobuf.3.18.1.nupkg.sha512",
-        "google.protobuf.nuspec",
-        "lib/net45/Google.Protobuf.dll",
-        "lib/net45/Google.Protobuf.pdb",
-        "lib/net45/Google.Protobuf.xml",
-        "lib/net5.0/Google.Protobuf.dll",
-        "lib/net5.0/Google.Protobuf.pdb",
-        "lib/net5.0/Google.Protobuf.xml",
-        "lib/netstandard1.1/Google.Protobuf.dll",
-        "lib/netstandard1.1/Google.Protobuf.pdb",
-        "lib/netstandard1.1/Google.Protobuf.xml",
-        "lib/netstandard2.0/Google.Protobuf.dll",
-        "lib/netstandard2.0/Google.Protobuf.pdb",
-        "lib/netstandard2.0/Google.Protobuf.xml"
-      ]
-    }
-  },
+  "libraries": {},
   "projectFileDependencyGroups": {
-    "net5.0-windows7.0": [
-      "Google.Protobuf >= 3.18.1"
-    ]
+    "net5.0-windows7.0": []
   },
   "packageFolders": {
     "C:\\Users\\julie\\.nuget\\packages\\": {},
@@ -86,12 +50,6 @@
     "frameworks": {
       "net5.0-windows7.0": {
         "targetAlias": "net5.0-windows",
-        "dependencies": {
-          "Google.Protobuf": {
-            "target": "Package",
-            "version": "[3.18.1, )"
-          }
-        },
         "imports": [
           "net461",
           "net462",

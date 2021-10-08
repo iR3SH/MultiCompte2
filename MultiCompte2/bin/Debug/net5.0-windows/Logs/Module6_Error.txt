@@ -1,0 +1,7 @@
+Message :
+Conversion from string "" to type 'Double' is not valid.
+
+StackTrace :
+   at Microsoft.VisualBasic.CompilerServices.Conversions.ToDouble(String Value, NumberFormatInfo NumberFormat)
+   at Microsoft.VisualBasic.CompilerServices.Conversions.ToDouble(String Value)
+   at MultiCompte2.Composants.Core.Mainfct(Int32 act, TabControl tabControl, IntPtr handle) in C:\Users\julie\source\repos\MultiCompte2\MultiCompte2\Composants\Core.cs:line 164

@@ -41,7 +41,7 @@ namespace MultiCompte2.Composants
                 }
                 else
                 {
-                    File.WriteAllText(file, title);
+                    File.WriteAllText(file, message);
                 }
             }
             catch(Exception ex)

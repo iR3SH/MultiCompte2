@@ -155,6 +155,7 @@ namespace MultiCompte2
             // timer1
             // 
             this.timer1.Interval = 2100;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // label2
             // 
@@ -178,6 +179,7 @@ namespace MultiCompte2
             this.label3.Size = new System.Drawing.Size(74, 15);
             this.label3.TabIndex = 5;
             this.label3.Text = "Réinitialisé !";
+            this.label3.Visible = false;
             // 
             // Configuration
             // 
@@ -192,6 +194,7 @@ namespace MultiCompte2
             this.Controls.Add(this.groupBox1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Configuration";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Configuration";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

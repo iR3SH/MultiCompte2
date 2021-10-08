@@ -119,5 +119,12 @@ namespace MultiCompte2
 				MessageBox.Show("Une erreur est survenue", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Stop);
 			}
 		}
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+			label2.Visible = false;
+			label3.Visible = false;
+			timer1.Start();
+		}
     }
 }

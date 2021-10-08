@@ -35,13 +35,13 @@ namespace MultiCompte2
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.lancerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.configurationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.lancerToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.renommerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.fermerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.lancerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.configurationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.toggle1 = new MultiCompte2.Composants.Toggle();
             this.label1 = new System.Windows.Forms.Label();
@@ -59,6 +59,29 @@ namespace MultiCompte2
             this.menuStrip1.Size = new System.Drawing.Size(800, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
+            // 
+            // toolStripMenuItem1
+            // 
+            this.toolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.lancerToolStripMenuItem,
+            this.configurationToolStripMenuItem});
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(61, 20);
+            this.toolStripMenuItem1.Text = "Options";
+            // 
+            // lancerToolStripMenuItem
+            // 
+            this.lancerToolStripMenuItem.Name = "lancerToolStripMenuItem";
+            this.lancerToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
+            this.lancerToolStripMenuItem.Text = "Lancer";
+            this.lancerToolStripMenuItem.Click += new System.EventHandler(this.lancerToolStripMenuItem_Click);
+            // 
+            // configurationToolStripMenuItem
+            // 
+            this.configurationToolStripMenuItem.Name = "configurationToolStripMenuItem";
+            this.configurationToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
+            this.configurationToolStripMenuItem.Text = "Configuration";
+            this.configurationToolStripMenuItem.Click += new System.EventHandler(this.configurationToolStripMenuItem_Click);
             // 
             // contextMenuStrip1
             // 
@@ -89,29 +112,6 @@ namespace MultiCompte2
             this.fermerToolStripMenuItem.Size = new System.Drawing.Size(133, 22);
             this.fermerToolStripMenuItem.Text = "Fermer";
             this.fermerToolStripMenuItem.Click += new System.EventHandler(this.fermerToolStripMenuItem_Click);
-            // 
-            // toolStripMenuItem1
-            // 
-            this.toolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.lancerToolStripMenuItem,
-            this.configurationToolStripMenuItem});
-            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(61, 20);
-            this.toolStripMenuItem1.Text = "Options";
-            // 
-            // lancerToolStripMenuItem
-            // 
-            this.lancerToolStripMenuItem.Name = "lancerToolStripMenuItem";
-            this.lancerToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.lancerToolStripMenuItem.Text = "Lancer";
-            this.lancerToolStripMenuItem.Click += new System.EventHandler(this.lancerToolStripMenuItem_Click);
-            // 
-            // configurationToolStripMenuItem
-            // 
-            this.configurationToolStripMenuItem.Name = "configurationToolStripMenuItem";
-            this.configurationToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.configurationToolStripMenuItem.Text = "Configuration";
-            this.configurationToolStripMenuItem.Click += new System.EventHandler(this.configurationToolStripMenuItem_Click);
             // 
             // tabControl1
             // 
@@ -165,6 +165,7 @@ namespace MultiCompte2
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Logiciel Multicompte 2.0";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
             this.Load += new System.EventHandler(this.Form1_Load);

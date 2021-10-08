@@ -61,6 +61,7 @@ namespace MultiCompte2.Composants
 							{
 								TabPage tabPage = new TabPage();
 								tabPage.Text = "Dofus";
+								tabPage.ToolTipText = process.Id.ToString();
 								Panel panel = new Panel();
 								panel.Dock = DockStyle.Fill;
 								Struct.Processus item = default(Struct.Processus);
@@ -164,6 +165,7 @@ namespace MultiCompte2.Composants
 								if ((double)liste_Processu5.Process.Id == Conversions.ToDouble(tabControl.SelectedTab.ToolTipText))
 								{
 									liste_Processu5.Process.Kill();
+									tabControl.TabPages.Remove(tabControl.SelectedTab);
 								}
 							}
 						}

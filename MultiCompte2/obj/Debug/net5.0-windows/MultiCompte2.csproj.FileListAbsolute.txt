@@ -5,7 +5,6 @@ C:\Users\julie\source\repos\MultiCompte2\MultiCompte2\bin\Debug\net5.0-windows\M
 C:\Users\julie\source\repos\MultiCompte2\MultiCompte2\bin\Debug\net5.0-windows\MultiCompte2.dll
 C:\Users\julie\source\repos\MultiCompte2\MultiCompte2\bin\Debug\net5.0-windows\ref\MultiCompte2.dll
 C:\Users\julie\source\repos\MultiCompte2\MultiCompte2\bin\Debug\net5.0-windows\MultiCompte2.pdb
-C:\Users\julie\source\repos\MultiCompte2\MultiCompte2\bin\Debug\net5.0-windows\Google.Protobuf.dll
 C:\Users\julie\source\repos\MultiCompte2\MultiCompte2\obj\Debug\net5.0-windows\MultiCompte2.Form1.resources
 C:\Users\julie\source\repos\MultiCompte2\MultiCompte2\obj\Debug\net5.0-windows\MultiCompte2.csproj.GenerateResource.cache
 C:\Users\julie\source\repos\MultiCompte2\MultiCompte2\obj\Debug\net5.0-windows\MultiCompte2.GeneratedMSBuildEditorConfig.editorconfig
@@ -18,3 +17,4 @@ C:\Users\julie\source\repos\MultiCompte2\MultiCompte2\obj\Debug\net5.0-windows\M
 C:\Users\julie\source\repos\MultiCompte2\MultiCompte2\obj\Debug\net5.0-windows\MultiCompte2.genruntimeconfig.cache
 C:\Users\julie\source\repos\MultiCompte2\MultiCompte2\obj\Debug\net5.0-windows\MultiCompte2.Configuration.resources
 C:\Users\julie\source\repos\MultiCompte2\MultiCompte2\obj\Debug\net5.0-windows\MultiCompte2.csproj.AssemblyReference.cache
+C:\Users\julie\source\repos\MultiCompte2\MultiCompte2\bin\Debug\net5.0-windows\Changelogs.txt

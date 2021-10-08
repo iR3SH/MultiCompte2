@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "FFSrIA+fR6J6qtf0Hql2bmAZpLzBygxt6pghPlsbuUbyZsAnBbYeDzmik3XHdFWtyfRxnI0VUrdT7d+WOAy0iQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\julie\\source\\repos\\MultiCompte2\\MultiCompte2\\MultiCompte2.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\julie\\.nuget\\packages\\google.protobuf\\3.18.1\\google.protobuf.3.18.1.nupkg.sha512"
+  ],
+  "logs": []
+}

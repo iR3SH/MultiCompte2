@@ -1,0 +1,17 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net5.0-windows</TargetFramework>
+    <UseWindowsForms>true</UseWindowsForms>
+    <ApplicationIcon>tachete.ico</ApplicationIcon>
+    <Authors>Hydronish</Authors>
+    <Company>HydronishCorp</Company>
+    <Product>Logiciel Multicompte 2</Product>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Google.Protobuf" Version="3.18.1" />
+  </ItemGroup>
+
+</Project>

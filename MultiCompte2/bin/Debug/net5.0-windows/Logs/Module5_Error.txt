@@ -1,0 +1,6 @@
+Message :
+Index was outside the bounds of the array.
+
+StackTrace :
+   at System.String.get_Chars(Int32 index)
+   at MultiCompte2.Composants.Core.Mainfct(Int32 act, TabControl tabControl, IntPtr handle) in C:\Users\julie\source\repos\MultiCompte2\MultiCompte2\Composants\Core.cs:line 125

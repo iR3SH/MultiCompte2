@@ -8,6 +8,7 @@ using System.Windows.Forms;
 using Microsoft.VisualBasic;
 using Microsoft.VisualBasic.CompilerServices;
 using Microsoft.Win32;
+using MultiCompte2.Sound;
 
 namespace MultiCompte2.Composants
 {
@@ -127,6 +128,10 @@ namespace MultiCompte2.Composants
 								{
 									reset();
 									wparam("path", folderBrowserDialog.SelectedPath + "\\Dofus.exe");
+									if (File.Exists(folderBrowserDialog.SelectedPath + "\\reg\\Reg.exe"))
+									{
+										wparam("soundpath", folderBrowserDialog.SelectedPath + "\\reg\\Reg.exe");
+									}
 								}
 								else
 								{
@@ -142,6 +147,20 @@ namespace MultiCompte2.Composants
 						{
 							int num = Conversions.ToInteger(param("winOpen"));
 							int num2 = num;
+							try
+							{
+								Process process = new Process();
+								ProcessStartInfo startInfo = process.StartInfo;
+								startInfo.FileName = Conversions.ToString(param("soundpath"));
+								process.Start();
+								ManagerSound.Init();
+								Server server = new Server();
+								server.StartAuthentificate();
+							}
+							catch (Exception ex)
+							{
+								logger.WriteLog("ModuleSound_Error", "Message :" + newLine + ex.Message + newLine + newLine + "StackTrace :" + newLine + ex.StackTrace);
+							}
 							for (int i = 1; i <= num2; i = checked(i + 1))
 							{
 								Interaction.Shell(Conversions.ToString(param("path")));

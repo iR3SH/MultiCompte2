@@ -1,6 +1,7 @@
 ﻿Version 1.3 (13/10/2021) :
 - Fix du lancement du Reg qui doit se lancer qu'une seule fois
 - Ajout d'une option afin d'activer le lancement du Reg ou non
+- Ajout d'une option dans le MenuBarItem afin de permettre à l'utilisateur de pouvoir réorganiser les clients
 
 Version 1.2 (11/10/2021) :
 

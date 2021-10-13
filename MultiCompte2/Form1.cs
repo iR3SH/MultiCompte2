@@ -9,13 +9,14 @@ namespace MultiCompte2
 {
     public partial class Form1 : Form
     {
+		private bool tabPagesOrderChangeAllowed = false;
         public Form1()
         {
             InitializeComponent();
-            base.Resize += Form1_Resize;
-            base.Load += Form1_Load;
+            Resize += Form1_Resize;
+            Load += Form1_Load;
             HOTKEY_ACTIVE += Start;
-            base.FormClosing += Form1_FormClosing;
+            FormClosing += Form1_FormClosing;
             //InitializeComponent();
         }
 
@@ -214,5 +215,21 @@ namespace MultiCompte2
         {
 			Core.Mainfct(5, tabControl1, Handle);
 		}
+
+        private void toolStripMenuItem3_Click(object sender, EventArgs e)
+		{
+			if(!tabPagesOrderChangeAllowed)
+            {
+				toolStripMenuItem3.Text = "Désactiver";
+				tabControl1.AllowDrop = true;
+				tabPagesOrderChangeAllowed = true;
+            }
+			else
+            {
+				toolStripMenuItem3.Text = "Activer";
+				tabControl1.AllowDrop = false;
+				tabPagesOrderChangeAllowed = false;
+            }
+        }
     }
 }

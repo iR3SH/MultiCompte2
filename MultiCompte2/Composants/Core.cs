@@ -22,6 +22,8 @@ namespace MultiCompte2.Composants
 
 		public const int WS_BORDER = 8388608;
 
+		private static bool SoundLaunched = false;
+
 		public static long Transforme_Intptr(int loWord, int hiWord)
 		{
 			return checked(unchecked((long)hiWord) * 65536L) | ((long)loWord & 0xFFFFL);
@@ -147,19 +149,26 @@ namespace MultiCompte2.Composants
 						{
 							int num = Conversions.ToInteger(param("winOpen"));
 							int num2 = num;
-							try
+							if (Conversions.ToInteger(param("isSoundActivated")) == 1)
 							{
-								Process process = new Process();
-								ProcessStartInfo startInfo = process.StartInfo;
-								startInfo.FileName = Conversions.ToString(param("soundpath"));
-								process.Start();
-								ManagerSound.Init();
-								Server server = new Server();
-								server.StartAuthentificate();
-							}
-							catch (Exception ex)
-							{
-								logger.WriteLog("ModuleSound_Error", "Message :" + newLine + ex.Message + newLine + newLine + "StackTrace :" + newLine + ex.StackTrace);
+								try
+								{
+									if (!SoundLaunched)
+									{
+										Process process = new Process();
+										ProcessStartInfo startInfo = process.StartInfo;
+										startInfo.FileName = Conversions.ToString(param("soundpath"));
+										process.Start();
+										ManagerSound.Init();
+										Server server = new Server();
+										server.StartAuthentificate();
+										SoundLaunched = true;
+									}
+								}
+								catch (Exception ex)
+								{
+									logger.WriteLog("ModuleSound_Error", "Message :" + newLine + ex.Message + newLine + newLine + "StackTrace :" + newLine + ex.StackTrace);
+								}
 							}
 							for (int i = 1; i <= num2; i = checked(i + 1))
 							{

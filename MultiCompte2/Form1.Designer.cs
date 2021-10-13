@@ -115,6 +115,7 @@ namespace MultiCompte2
             // 
             // tabControl1
             // 
+            this.tabControl1.AllowDrop = true;
             this.tabControl1.ContextMenuStrip = this.contextMenuStrip1;
             this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControl1.Location = new System.Drawing.Point(0, 24);

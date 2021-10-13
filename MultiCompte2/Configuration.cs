@@ -25,6 +25,14 @@ namespace MultiCompte2
 			{
 				Core.wparam("winOpen", numericUpDown1.Value.ToString());
 			}
+			if(isSound.Checked)
+            {
+				Core.wparam("isSoundActivated", "1");
+            }
+			else
+            {
+				Core.wparam("isSoundActivated", "0");
+            }
 			Enum.TryParse<Keys>(Keys.Text, out var result);
 			HotKey.FsModifiers fsModifiers = HotKey.FsModifiers.None;
 			IEnumerator enumerator = default(IEnumerator);

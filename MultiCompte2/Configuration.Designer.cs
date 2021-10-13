@@ -44,6 +44,7 @@ namespace MultiCompte2
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.isSound = new System.Windows.Forms.CheckBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
@@ -102,11 +103,12 @@ namespace MultiCompte2
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.isSound);
             this.groupBox2.Controls.Add(this.numericUpDown1);
             this.groupBox2.Controls.Add(this.label1);
             this.groupBox2.Location = new System.Drawing.Point(154, 12);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(232, 53);
+            this.groupBox2.Size = new System.Drawing.Size(232, 77);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Autres";
@@ -134,7 +136,7 @@ namespace MultiCompte2
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(154, 68);
+            this.button1.Location = new System.Drawing.Point(154, 95);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(55, 23);
             this.button1.TabIndex = 2;
@@ -144,7 +146,7 @@ namespace MultiCompte2
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(215, 68);
+            this.button2.Location = new System.Drawing.Point(215, 95);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(171, 23);
             this.button2.TabIndex = 3;
@@ -162,7 +164,7 @@ namespace MultiCompte2
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label2.ForeColor = System.Drawing.Color.Green;
-            this.label2.Location = new System.Drawing.Point(306, 98);
+            this.label2.Location = new System.Drawing.Point(306, 121);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(80, 15);
             this.label2.TabIndex = 4;
@@ -174,18 +176,30 @@ namespace MultiCompte2
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label3.ForeColor = System.Drawing.Color.Red;
-            this.label3.Location = new System.Drawing.Point(154, 98);
+            this.label3.Location = new System.Drawing.Point(154, 121);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(74, 15);
             this.label3.TabIndex = 5;
             this.label3.Text = "Réinitialisé !";
             this.label3.Visible = false;
             // 
+            // isSound
+            // 
+            this.isSound.AutoSize = true;
+            this.isSound.Checked = true;
+            this.isSound.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.isSound.Location = new System.Drawing.Point(6, 52);
+            this.isSound.Name = "isSound";
+            this.isSound.Size = new System.Drawing.Size(97, 19);
+            this.isSound.TabIndex = 2;
+            this.isSound.Text = "Activer le son";
+            this.isSound.UseVisualStyleBackColor = true;
+            // 
             // Configuration
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(398, 122);
+            this.ClientSize = new System.Drawing.Size(398, 143);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.button2);
@@ -221,5 +235,6 @@ namespace MultiCompte2
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.CheckBox isSound;
     }
 }

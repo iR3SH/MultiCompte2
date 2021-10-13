@@ -1,3 +1,11 @@
-﻿Verison 1.1 (08/10/2021) :
+﻿Version 1.3 (13/10/2021) :
+- Fix du lancement du Reg qui doit se lancer qu'une seule fois
+- Ajout d'une option afin d'activer le lancement du Reg ou non
+
+Version 1.2 (11/10/2021) :
+
+- Ajout des Classes pour gérer le son du jeu
+
+Verison 1.1 (08/10/2021) :
 
 - Exception du Module 6 désormais gérée, on peut désormais fermer un client via le menu contextuel

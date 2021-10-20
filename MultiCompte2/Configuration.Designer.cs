@@ -37,6 +37,7 @@ namespace MultiCompte2
             this.WinKey = new System.Windows.Forms.CheckBox();
             this.Alt = new System.Windows.Forms.CheckBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.isSound = new System.Windows.Forms.CheckBox();
             this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
@@ -44,7 +45,6 @@ namespace MultiCompte2
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.isSound = new System.Windows.Forms.CheckBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
@@ -112,6 +112,18 @@ namespace MultiCompte2
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Autres";
+            // 
+            // isSound
+            // 
+            this.isSound.AutoSize = true;
+            this.isSound.Checked = true;
+            this.isSound.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.isSound.Location = new System.Drawing.Point(6, 52);
+            this.isSound.Name = "isSound";
+            this.isSound.Size = new System.Drawing.Size(97, 19);
+            this.isSound.TabIndex = 2;
+            this.isSound.Text = "Activer le son";
+            this.isSound.UseVisualStyleBackColor = true;
             // 
             // numericUpDown1
             // 
@@ -182,18 +194,6 @@ namespace MultiCompte2
             this.label3.TabIndex = 5;
             this.label3.Text = "Réinitialisé !";
             this.label3.Visible = false;
-            // 
-            // isSound
-            // 
-            this.isSound.AutoSize = true;
-            this.isSound.Checked = true;
-            this.isSound.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.isSound.Location = new System.Drawing.Point(6, 52);
-            this.isSound.Name = "isSound";
-            this.isSound.Size = new System.Drawing.Size(97, 19);
-            this.isSound.TabIndex = 2;
-            this.isSound.Text = "Activer le son";
-            this.isSound.UseVisualStyleBackColor = true;
             // 
             // Configuration
             // 

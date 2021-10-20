@@ -10,15 +10,18 @@ namespace MultiCompte2.Composants
     {
 		public struct Processus
 		{
+			public static Logger logger = new Logger();
+
 			public Process Process;
 
 			public Panel Panel;
 
 			public TabPage Tab;
 
-			public void Redimentionne()
+            public static string newLine = Environment.NewLine;
+
+            public void Redimentionne()
 			{
-				Logger logger = new Logger();
 				string newLine = Environment.NewLine;
 				checked
 				{
@@ -45,8 +48,6 @@ namespace MultiCompte2.Composants
 
 			public void suivre(IntPtr proc)
 			{
-				Logger logger = new Logger();
-				string newLine = Environment.NewLine;
 				try
 				{
 					if (!(proc == (IntPtr)Process.Id))
@@ -65,8 +66,6 @@ namespace MultiCompte2.Composants
 
 			public void release()
 			{
-				Logger logger = new Logger();
-				string newLine = Environment.NewLine;
 				try
 				{
 					Api.SetParent(Process.MainWindowHandle, Api.GetDesktopWindow());
@@ -80,8 +79,6 @@ namespace MultiCompte2.Composants
 
 			public object rec(bool @bool)
 			{
-				Logger logger = new Logger();
-				string newLine = Environment.NewLine;
 				object result = default(object);
 				try
 				{

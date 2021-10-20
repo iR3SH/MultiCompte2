@@ -24,6 +24,9 @@ namespace MultiCompte2.Composants
 
 		private static bool SoundLaunched = false;
 
+		public static Logger logger = new Logger();
+		public static string newLine = Environment.NewLine;
+
 		public static long Transforme_Intptr(int loWord, int hiWord)
 		{
 			return checked(unchecked((long)hiWord) * 65536L) | ((long)loWord & 0xFFFFL);
@@ -31,8 +34,6 @@ namespace MultiCompte2.Composants
 		[MethodImpl(MethodImplOptions.NoInlining | MethodImplOptions.NoOptimization)]
 		public static void Mainfct(int act, TabControl tabControl, IntPtr handle)
 		{
-			Logger logger = new Logger();
-			string newLine = Environment.NewLine;
 			//Discarded unreachable code: IL_01a7, IL_01ff, IL_052d
 			switch (act)
 			{
@@ -53,7 +54,7 @@ namespace MultiCompte2.Composants
 					catch (Exception ex13)
 					{
 						MessageBox.Show("Erreur : Module 1");
-						logger.WriteLog("Module1_Error", "Message :" + newLine + ex13.Message + newLine + newLine + "StackTrace :" + newLine + ex13.StackTrace);
+                        logger.WriteLog("Module1_Error", "Message :" + newLine + ex13.Message + newLine + newLine + "StackTrace :" + newLine + ex13.StackTrace);
 					}
 					try
 					{
@@ -62,12 +63,16 @@ namespace MultiCompte2.Composants
 						{
 							if (Operators.CompareString(process.ProcessName, "Dofus", TextCompare: false) == 0)
 							{
-								TabPage tabPage = new TabPage();
-								tabPage.Text = "Dofus";
-								tabPage.ToolTipText = process.Id.ToString();
-								Panel panel = new Panel();
-								panel.Dock = DockStyle.Fill;
-								Struct.Processus item = default(Struct.Processus);
+                                TabPage tabPage = new TabPage
+                                {
+                                    Text = "Dofus",
+                                    ToolTipText = process.Id.ToString()
+                                };
+                                Panel panel = new Panel
+                                {
+                                    Dock = DockStyle.Fill
+                                };
+                                Struct.Processus item = default(Struct.Processus);
 								item.Process = process;
 								item.Panel = panel;
 								item.Tab = tabPage;
@@ -259,15 +264,13 @@ namespace MultiCompte2.Composants
 						logger.WriteLog("Module10_Error", "Message :" + newLine + ex.Message + newLine + newLine + "StackTrace :" + newLine + ex.StackTrace);
 					}
 					break;
-				case 6:
-					break;
+				/*case 6:
+					break;*/
 			}
 		}
 
 		public static void setparam(NumericUpDown numericUpDown, CheckBox Alt, CheckBox Ctrl, CheckBox Windows, ComboBox comboBox)
 		{
-			Logger logger = new Logger();
-			string newLine = Environment.NewLine;
 			try
 			{
 				numericUpDown.Value = Conversions.ToDecimal(param("winOpen"));
@@ -286,8 +289,6 @@ namespace MultiCompte2.Composants
 		public static object param(string parm)
 		{
 			object result = default(object);
-			Logger logger = new Logger();
-			string newLine = Environment.NewLine;
 			try
 			{
 				string text = Conversions.ToString(Registry.GetValue("HKEY_CURRENT_USER\\Multi-CompteV1\\Settings", parm, ""));
@@ -314,8 +315,6 @@ namespace MultiCompte2.Composants
 
 		public static void wparam(string par, string val)
 		{
-			Logger logger = new Logger();
-			string newLine = Environment.NewLine;
 			try
 			{
 				Registry.SetValue("HKEY_CURRENT_USER\\Multi-CompteV1\\Settings", par, val);
@@ -329,8 +328,6 @@ namespace MultiCompte2.Composants
 
 		public static void reset()
 		{
-			Logger logger = new Logger();
-			string newLine = Environment.NewLine;
 			try
 			{
 				wparam("winOpen", "1");

@@ -1,0 +1,5 @@
+Message :
+Arithmetic operation resulted in an overflow.
+
+StackTrace :
+   at MultiCompte2.Composants.Struct.Processus.rec(Boolean bool) in C:\Users\julie\source\repos\MultiCompte2\MultiCompte2\Composants\Struct.cs:line 83

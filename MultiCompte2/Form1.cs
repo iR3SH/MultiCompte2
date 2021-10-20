@@ -10,6 +10,8 @@ namespace MultiCompte2
     public partial class Form1 : Form
     {
 		private bool tabPagesOrderChangeAllowed = false;
+		private Logger logger = new Logger();
+		private string newLine = Environment.NewLine;
         public Form1()
         {
             InitializeComponent();
@@ -74,9 +76,7 @@ namespace MultiCompte2
 				}
 				catch (Exception ex)
 				{
-					ProjectData.SetProjectError(ex);
-					Exception ex2 = ex;
-					ProjectData.ClearProjectError();
+					logger.WriteLog("Module30_Error", "Message :" + newLine + ex.Message + newLine + newLine + "StackTrace :" + newLine + ex.StackTrace);
 				}
 			}
 		}

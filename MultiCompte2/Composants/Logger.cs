@@ -11,7 +11,6 @@ namespace MultiCompte2.Composants
         
         public Logger()
         {
-
         }
 
         public void WriteLog(string title, string message)
